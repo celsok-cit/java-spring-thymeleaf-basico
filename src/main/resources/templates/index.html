@@ -19,10 +19,6 @@
 			</form>
 		</div>
 		
-		<div style="margin: auto; margin: 20px;">
-			
-		</div>
-	
         <table class="table table-hover">
             <thead>
                 <tr>
@@ -50,28 +46,7 @@
                     <th th:text="${funcionario.email}" class="font-weight-normal">Email</th>
                     <th th:text="${funcionario.senha}" class="font-weight-normal">Senha</th>
                     <td><a th:href="${'/editar/' + funcionario.id}" class="btn btn-warning">Editar</a></td>
-               	<!--  <td><a th:href="${'/remover/' + funcionario.id}" class="btn btn-danger">Remover</a></td> -->
-               		<td><a data-toggle="modal" data-target="#myModal" th:href="${'/'}" class="btn btn-danger">Remover</a></td>
-               		
-               		<div class="modal fade" id="myModal">
-	                    <div class="modal-dialog">
-	                        <div class="modal-content">
-	
-	                            <!-- Modal Header -->
-	                            <div class="modal-header">
-	                                <h6 class="modal-title" th:text="${'Deseja remover o funcionário: ' + funcionario.nome + '?'}"></h6>
-	                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-	                            </div>
-	
-	                            <!-- Modal footer -->
-	                            <div class="modal-footer">
-	                                <button type="button" class="btn btn-primary"
-	                                    data-dismiss="modal">Close</button>
-	                                <a th:href="${'/remover/' + funcionario.id}" class="btn btn-danger">Remover</a>
-	                            </div>
-	                        </div>
-	                    </div>
-                	</div>
+               		<td><a th:href="${'/remover/' + funcionario.id}" class="btn btn-danger">Remover</a></td> 
                 </tr>
             </tbody>
         </table>
