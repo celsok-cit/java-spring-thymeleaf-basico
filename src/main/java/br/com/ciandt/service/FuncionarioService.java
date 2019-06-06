@@ -14,13 +14,11 @@ public class FuncionarioService {
 	@Autowired
 	FuncionarioRepository repository;
 	
-	public List<Funcionario> buscarFuncionarios() {
-		
+	public List<Funcionario> buscarFuncionarios() {		
 		return (List<Funcionario>) repository.findAll();
 	}
 	
-	public Funcionario salvar(Funcionario funcionario) {
-		
+	public Funcionario salvar(Funcionario funcionario) {		
 		return repository.save(funcionario);
 	}
 
@@ -39,5 +37,4 @@ public class FuncionarioService {
 	public List<Funcionario> buscarPorNome(String nome) {
 		return repository.findByNomeContainingIgnoreCase(nome);
 	}
-
 }
